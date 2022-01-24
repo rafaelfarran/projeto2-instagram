@@ -1,6 +1,7 @@
 body {
-    background-color: #FAFAFA;
+    background-color: #E5E5E5;
     padding-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .conteudo{
@@ -18,7 +19,7 @@ header .barra-topo {
     height: 54px;
     justify-content: center;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 .icone-instagram ion-icon {
@@ -102,28 +103,26 @@ header .profile ion-icon {
     display: block;
     justify-content: center;
     position: relative;
-    right: 300px;
+    right: 200px;
 }
 
 .coluna-direita {
     width: 30%;
     justify-content: center;
     margin-top: 100px;
-    background-color: #FAFAFA;
     position: fixed;
-    right:300px;
+    right: 200px;
     top: 0px
 }
 .coluna-direita-topo {
     width: 100%;
     justify-content: center;
-    background-color:#FAFAFA;
 }
 
 .storyes {
     display: flex;
     justify-content: center;
-    width: 614px;
+    width: 565px;
     background-color: white;
     height: 118px;
     margin-right: 50px;
@@ -131,8 +130,9 @@ header .profile ion-icon {
     overflow-y: hidden;
     padding-left: 50px;
     border: 1px solid rgb(189, 189, 189);
-    border-radius: 2px;
+    border-radius: 4px;
     margin-top: 100px;
+    position: relative;
 }
 
 .storyes img {
@@ -145,7 +145,7 @@ header .profile ion-icon {
 
 
 .storyes .storye1 {
-    margin-left: 15px;
+    margin-left: 8px;
     height: 65px;
     border-radius: 50%;
     background-color: tomato;
@@ -159,7 +159,6 @@ header .profile ion-icon {
 
 .coluna-direita-topo .ad {
     height: 118px;
-    background-color: #FAFAFA;
     display: flex;
     align-items: center;
 }
@@ -196,7 +195,6 @@ header .profile ion-icon {
 }
 
 .sugestoes h1 {
-    color: #8E8E8E;
     font-weight: 500;
     font-size: 15px;
     padding: 5px;
@@ -206,7 +204,7 @@ header .profile ion-icon {
     color: #262626;
     font-weight: 500;
     font-size: 15px;
-    margin-left: 150px;
+    margin-left: 130px;
 }
 
 .bottom {
@@ -216,7 +214,6 @@ header .profile ion-icon {
 
 .bottom-esquerdo {
     height: 30px;
-    background-color: #FAFAFA;
     display: block;
     align-items: center;
     padding-top: 10px;
@@ -228,12 +225,16 @@ header .profile ion-icon {
     padding: 10px;
 }
 
+.sugestoes h1{
+    color: #8E8E8E;
+}
 .perfil-sugestao {
     display: flex;
 }
 
 .perfil-sugestao h1, h3 {
-    margin-top: 5px;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 .bottom .mudar h4 {
@@ -255,13 +256,136 @@ header .profile ion-icon {
     color: #c7c7c7;
     text-decoration: plum;
     margin-top: 25px;
-    font-size: 11px;
+    font-size: 12px;
     width: 250px;
 }
 
 .posts {
-    width: 666px;
-    height: 749px;
-    background-color: pink;
+    width: 614px;
+    height: 850px;
     margin-top: 30px;
+    background-color: white;
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.posts img {
+    height: 614px;
+}
+
+.conteudo-post img {
+    height: 60px;
+    border-radius: 50%;
+}
+
+.conteudo-post {
+    display: flex;
+    height: 70px;
+    margin: auto;
+}
+
+.conteudo-post h1 {
+    margin: auto 10px;
+}
+
+.three-icons ion-icon {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.three-icons {
+    display: flex;
+}
+
+.favorite-icon {
+    margin-left: 400px;
+}
+
+.curtido-por {
+    display: flex;
+}
+
+.curtido-por span {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: 400;
+    
+}
+
+.curtido-por strong {
+    font-weight: 600;
+}
+
+.curtido-por img {
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.barra-bottom {
+    width: 100%;
+    margin: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    height: 54px;
+    justify-content: space-between;
+    padding-left: 30px;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+}
+
+.barra-bottom ion-icon {
+    font-size: 19px;
+}
+
+.seta  {
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    margin-top: 45px;
+}
+
+.seta ion-icon {
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+}
+
+/* ---- media query ---- */
+
+@media (max-width: 935px ) {
+    .coluna-direita {
+    display: none;
+    }
+    .coluna-esquerda {
+        display:inline-block;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media (max-width: 614px) {
+    .coluna-direita {
+    display: none;
+    }
+    .coluna-esquerda {
+        width: 614px;
+        right: 400px;
+        padding-left: 50px;
+    }
+    .posts {
+        width: 100%;
+    }
+}
+
+@media (min-width: 614px) {
+    .barra-bottom {
+    display: none;
+    }
 }
